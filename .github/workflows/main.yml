@@ -13,4 +13,17 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-‎Read more
+
+      - name: Setup JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17' # या तुम्हारे प्रोजेक्ट के हिसाब से कोई और वर्ज़न
+
+      - name: Build with Gradle
+        run: ./gradlew assembleRelease
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: app-apk
+          path: app/build/outputs/apk/release/app-release.apk

@@ -15,9 +15,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup JDK
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v5
         with:
-          java-version: '17' # या तुम्हारे प्रोजेक्ट के हिसाब से कोई और वर्ज़न
+          java-version: '17'
+          distribution: 'temurin'
 
       - name: Build with Gradle
         run: ./gradlew assembleRelease

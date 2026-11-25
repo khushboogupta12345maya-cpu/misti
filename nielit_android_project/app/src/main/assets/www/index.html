@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#092c54">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="NIELIT Portal">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" href="assets/nielit-logo192.png">
+  <link rel="preload" as="image" href="assets/campus-gorakhpur.jpg">
+  <meta name="description" content="Student-created NIELIT Gorakhpur portal prototype using sample information.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <title>NIELIT Gorakhpur | Student Portal Prototype</title>
+  <link rel="icon" href="assets/nielit-logo192.png">
+  <link rel="stylesheet" href="styles.css?v=7">
+  <script src="app.js?v=7" defer></script>
+</head>
+<body>
+  <div class="prototype-notice"><span>STUDENT-CREATED PROTOTYPE</span> · Unofficial preview with sample information only. Not operated by or connected to NIELIT.</div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="NIELIT Gorakhpur portal home">
+      <img src="assets/nielit-logo192.png" alt="NIELIT logo">
+      <span><b>NIELIT Gorakhpur</b><small>Student &amp; Campus Portal · Prototype</small></span>
+    </a>
+    <div class="header-actions">
+      <button class="button button-small button-nav" id="header-login" data-action="login">Portal login</button>
+      <label class="accent-picker" aria-label="Choose theme color"><span>Color</span><select id="accent-picker" aria-label="Theme color"><option value="blue">Blue</option><option value="teal">Teal</option><option value="violet">Violet</option></select></label>
+      <button class="icon-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme">☾</button>
+      <button class="icon-button" id="notification-demo" type="button" aria-label="Try a sample notification" title="Try a sample notification">🔔</button>
+      <span class="connection-status" data-online-status></span>
+    </div>
+    <button class="mobile-toggle" id="mobile-toggle" aria-label="Open menu">☰</button>
+    <nav class="site-nav" id="site-nav">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#courses">Courses</a><a href="#admissions">Admissions</a><a href="#gallery">Gallery</a>
+      <div class="mobile-menu-options">
+        <label class="accent-picker"><span>Theme color</span><select id="mobile-accent-picker" aria-label="Theme color"><option value="blue">Blue</option><option value="teal">Teal</option><option value="violet">Violet</option></select></label>
+        <button class="button button-quiet button-small" data-action="notification">Try sample notification</button>
+      </div>
+    </nav>
+  </header>
+  <main id="app"></main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><img src="assets/nielit-logo192.png" alt=""><span><b>NIELIT Gorakhpur</b><small>Independent student-built portal prototype</small></span></div>
+      <p>Sample notices, courses, student data, fees, results and campus visuals are illustrative. Confirm official information through NIELIT's official channels.</p>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Close">×</button>
+      <div id="modal-content"></div>
+    </section>
+  </div>
+</body>
+</html>
